@@ -11,14 +11,14 @@ if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam")then repeat wait()if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("ChooseTeam")then if string.find(tostring(getgenv().Team),"Pirate")then for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do a.Function()end elseif string.find(tostring(getgenv().Team),"Marine")then for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.TextButton.Activated))do a.Function()end else for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do a.Function()end end end until game.Players.LocalPlayer.Team~=nil and game:IsLoaded()end;function InstantKick(a)game.Players.LocalPlayer:Kick(a)end
 _G.KaitunMode = true
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
-local notif1 = Notification.new("message", "SHIN X HUB Script Kaitun Premium", "Loading Script..")
-local notif2 = Notification.new("message", "SHIN X HUB Script Kaitun Premium", "Check Key.")
+local notif1 = Notification.new("message", "SHIN X HUB Script Kaitun", "Loading Script..")
+local notif2 = Notification.new("message", "SHIN X HUB Script Kaitun", "Check Key.")
 wait(1)
-local notif3 = Notification.new("message", "SHIN X HUB Script Kaitun Premium", "Check Map...")
+local notif3 = Notification.new("message", "SHIN X HUB Script Kaitun", "Check Map...")
 wait(2)
-local notif4 = Notification.new("success", "SHIN X HUB Script Kaitun Premium", "Loading Success โ…")
+local notif4 = Notification.new("success", "SHIN X HUB Script Kaitun", "Loading Success …")
 wait(0.4)
-local notif5 = Notification.new("success", "SHIN X HUB Script Kaitun Premium", "โ…")
+local notif5 = Notification.new("success", "SHIN X HUB Script Kaitun", "Kaitun…")
 wait(0.5)
 notif1:delete()
 wait(0.1)
@@ -85,7 +85,7 @@ Open.BorderSizePixel = 0.5
 Open.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 Open.Size = UDim2.new(0, 39, 0, 30)
 Open.Font = Enum.Font.Code
-Open.Text = "X"
+Open.Text = "S"
 Open.TextColor3 = Color3.fromRGB(51,255,255)
 Open.TextScaled = true
 Open.TextSize = 14.000
@@ -1893,12 +1893,12 @@ end
 	end
 	return uitab
 end
-local Library = Update:Window("      Xerun Hub Kaitun Mode");
+local Library = Update:Window("      Kaitun --// SHIN X HUB \\--");
 local Main = Library:Tab("Main","rbxassetid://0")
 
 Main:Seperator("Main")
 
-Main:Toggle("Auto Farm",_G.KaitunMode,function(value)
+Main:Toggle("Start Kaitun --// เริ่มไก่ตัน \\--",_G.KaitunMode,function(value)
 _G.SelectWeapon = "Melee"
 _G.AutoFarm = value
 StopTween(_G.AutoFarm)
@@ -1906,7 +1906,7 @@ setfpscap(30)
 _G.AutoSuperhuman = value
 _G.XERUNKAITUN = value
 end)
-Main:Toggle("Reduce GPU",_G.ReduceGpu,function(value)
+Main:Toggle("Reduce GPU --// เปิดจอขาว \\--",_G.ReduceGpu,function(value)
 _G.ReduceGpu = value
 		if _G.ReduceGpu == true then
 			game:GetService("RunService"):Set3dRenderingEnabled(false)
@@ -3918,7 +3918,7 @@ spawn(function()
 		end
 	end
 end)
-_G.AutoSetSpawn = true
+_G.AutoSetSpawn = false
 spawn(function()
     pcall(function()
         while wait() do
