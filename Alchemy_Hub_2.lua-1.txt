@@ -3867,7 +3867,6 @@ end)
 Set:Toggle("Fast Attack", true, function(value)
     _G.FastAttack = value
 end)
---Fast Attack Delta
 local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
 CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 y = debug.getupvalues(CombatFrameworkR)[2]
