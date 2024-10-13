@@ -2194,21 +2194,6 @@ Infor:Button("คัดลอกชื่อยูทูป", function()
 end)
 -----------------------------------------------------------------------------------------------------------------------------Main Tab
 Main:Seperator("ส่วนเสริม")
-Main:Dropdown("เลือกโหมดตีเร็ว", {"Noob","Fast","Very","SHINXHUB"}, function(value)
-    _G.SelectFastAttack = value
-end)
-_G.SelectFastAttack = _G.SelectFastAttack or "SHINXHUB"
-    _G.SelectFastAttack = Value
-	if _G.SelectFastAttack == "Noob" then
-		_G.Fast_Delay = 0.12
-	elseif _G.SelectFastAttack == "Fast" then
-		_G.Fast_Delay = 0.9
-	elseif _G.SelectFastAttack == "VeryFast" then
-		_G.Fast_Delay = 0.5
-	elseif _G.SelectFastAttack == "SHINXHUB" then
-		_G.Fast_Delay = 0
-	 end
- end)
  
 Main:Dropdown("เลือกอาวุธ", {"Melee","Sword","Fruit","Gun"}, function(value)
     _G.SelectWeapon = value
